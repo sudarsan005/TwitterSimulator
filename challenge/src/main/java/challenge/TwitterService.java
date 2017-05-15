@@ -232,7 +232,6 @@ public class TwitterService implements RowMapper {
             filteredTweetMap.put(findPersonNameById(pid),new ArrayList<String>());
             filteredTweetMap.put(findPersonNameById(id),new ArrayList<String>());
         }
-        System.out.println(searchTerm);
         NamedParameterJdbcTemplate np= new NamedParameterJdbcTemplate(h2);
         String sql ="SELECT NAME,CONTENT FROM TWEET JOIN PERSON ON TWEET.PERSON_iD = PERSON.iD WHERE PERSON_ID in (:ids) and CONTENT LIKE :searchTerm";
 
