@@ -35,4 +35,4 @@ this will give the minimum hops required to reach the person.
 ### Get popular follower
 
 To get popular follower for all users http://localhost:8080/twitter/getDistance/findpopular
-this will return popular follower for all users.
+this will return list of all users with their respective popular follower.
