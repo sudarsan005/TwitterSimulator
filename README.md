@@ -5,7 +5,7 @@ I have made the following assumptions for this simulator.
 
 I have completed both the shortest path, and popular followers for each user in the task
 
-The following are the endpoint and URI used in the project
+#The following are the endpoint and URI used in the challenge
 Read Tweets:
 to get tweets of the user and user's followers tweets: http://localhost:8080/twitter/readtweets
 to search for a specific tweet http://localhost:8080/twitter/readtweets?search={searchterm}
