@@ -274,8 +274,7 @@ public class TwitterService implements RowMapper {
     }
 
 
-    //find shortest distance- using a Breath First Search approach , we can also use
-    //bi-directional BFS.
+    //find shortest distance- using a Breath First Search approach
     public int findDistance(Person p1, Person p2)
     {
         int count=0;

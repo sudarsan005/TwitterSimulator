@@ -67,6 +67,7 @@ public class ChallengeApplicationTest {
 
     }
 
+    //this test will fail if its run 2nd time withour re-starting the server, as you would have already followed the person
     @Test
     public void follow() throws Exception{
         final TestRestTemplate template = new TestRestTemplate();
@@ -82,6 +83,7 @@ public class ChallengeApplicationTest {
         assertEquals("{\"Code\":\"Failed: Person Does not exist\"}",response.getBody().toString());
     }
 
+    //this test will fail if its run 2nd time withour re-starting the server, as you would have already unfollowed the person
     @Test
     public void unFollow() throws Exception{
         final TestRestTemplate template = new TestRestTemplate();
@@ -95,7 +97,6 @@ public class ChallengeApplicationTest {
         this.base=new URL("http://localhost:8080/twitter/unfollowPerson/Abc xyz");
         response = template.exchange(base.toString(), HttpMethod.POST, new HttpEntity<>(headers), String.class);
         assertEquals("{\"Code\":\"Failed: Person Does not exist\"}",response.getBody().toString());
-        //"{\"Code\",\"Failed: Person Does not exist\"}"
     }
 
     @Test
